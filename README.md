@@ -1,5 +1,3 @@
-# terraform-tutorial
-
 # Terraform tutorial
 Beginer to Advancer
 
@@ -31,4 +29,17 @@ terraform plan -out filename.terraform
 
 terraform apply filename.terraform
 
+```
+
+# How to update file
+
+```bash
+provisioner "file" {
+    source = "app.conf"
+    destination = "/etc/myapp.conf"
+    connection {
+        user = var.instance_username
+        password = var.instance_password
+    }
+}
 ```
