@@ -1,5 +1,7 @@
 #!/bin/bash
 
+until [[ -f /var/lib/cloud/instance/boot-finished ]]; do
+  sleep 1
+done
 apt-get update
-
-apt -y install nginx
+apt-get install -y nginx

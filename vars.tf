@@ -19,7 +19,7 @@ variable "AMIS" {
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "./credencials/mykey.pem"
+  default = "./credencials/mykey"
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
