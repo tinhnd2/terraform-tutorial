@@ -31,7 +31,13 @@ terraform apply filename.terraform
 
 ```
 
-# How to update file
+# generate ssh key
+
+```bash
+ssh-keygen -f mykey -C "example@gmail.com"
+```
+
+# How to update file with username && password
 
 ```bash
 provisioner "file" {

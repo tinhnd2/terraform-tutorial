@@ -13,6 +13,19 @@ variable "AWS_SECRET_KEY" {
 variable "AMIS" {
   type = map(string)
   default = {
-    ap-southeast-1 = "ami-02f26adf094f51167"
+    ap-southeast-1 = "ami-0d058fe428540cd89"
+    ap-northeast-1 = "ami-0df99b3a8349462c6"
   }
+}
+
+variable "PATH_TO_PRIVATE_KEY" {
+  default = "./credencials/mykey.pem"
+}
+
+variable "PATH_TO_PUBLIC_KEY" {
+  default = "./credencials/mykey.pub"
+}
+
+variable "INSTANCE_USERNAME" {
+  default = "ubuntu"
 }
