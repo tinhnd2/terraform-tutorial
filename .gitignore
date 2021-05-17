@@ -14,6 +14,7 @@
 # SSH Keys
 *.pem
 *.pub
+mykey
 
 # Backup files
 *.bak
