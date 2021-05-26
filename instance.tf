@@ -1,12 +1,12 @@
 resource "aws_key_pair" "mykey" {
   key_name   = "mykey"
-  public_key = "${file("${var.PATH_TO_PUBLIC_KEY}")}"
+  public_key = file(var.PATH_TO_PUBLIC_KEY)
 }
 
 resource "aws_instance" "example" {
-  ami = var.AMIS[var.AWS_REGION]
+  ami = var.AMISS[var.AWS_REGION]
   instance_type = "t2.micro"
-  key_name = "${aws_key_pair.mykey.key_name}"
+  key_name = aws_key_pair.mykey.key_name
 
   provisioner "file" {
     source = "script.sh"
@@ -25,12 +25,12 @@ resource "aws_instance" "example" {
   }
 
   connection {
-    user = "${var.INSTANCE_USERNAME}"
-    private_key = "${file("${var.PATH_TO_PRIVATE_KEY}")}"
+    user = var.INSTANCE_USERNAME
+    private_key = file(var.PATH_TO_PRIVATE_KEY)
     host = self.public_ip
   }
 }
 
 output "public_ip" {
-  value = "${aws_instance.example.public_ip}"
+  value = aws_instance.example.public_ip
 }

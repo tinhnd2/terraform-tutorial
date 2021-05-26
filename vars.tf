@@ -10,7 +10,7 @@ variable "AWS_SECRET_KEY" {
   type = string
 }
 
-variable "AMIS" {
+variable "AMISS" {
   type = map(string)
   default = {
     ap-southeast-1 = "ami-0d058fe428540cd89"

@@ -48,3 +48,8 @@ operations/variable-scripts/variable.json
 # environment
 
 *.tfvars
+
+# idea
+
+private_ips.txt
+.idea
