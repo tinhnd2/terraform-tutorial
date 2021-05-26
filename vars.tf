@@ -2,6 +2,10 @@ variable "AWS_REGION" {
   type = string
 }
 
+variable "AWS_SUBNET_ZONE" {
+  type = string
+}
+
 variable "AWS_ACCESS_KEY" {
   type = string
 }
@@ -28,4 +32,8 @@ variable "PATH_TO_PUBLIC_KEY" {
 
 variable "INSTANCE_USERNAME" {
   default = "ubuntu"
+}
+
+variable "VPC_ID" {
+  type = string
 }
